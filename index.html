@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>mellstroygame — Telegram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #042231;
+      --bg2: #0b2632;
+      --card:#0e1b26;
+      --accent:#4fc3ff;
+      --accent-2:#5aa6ff;
+      --text:#dbeaf0;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(22,78,96,0.25), transparent 15%),
+        radial-gradient(900px 500px at 90% 80%, rgba(10,40,55,0.2), transparent 15%),
+        linear-gradient(180deg,var(--bg1),var(--bg2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px;
+      color:var(--text);
+    }
+
+    .card{
+      width:min(860px,92%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:20px;
+      padding:56px 48px 36px;
+      position:relative;
+      box-shadow:
+        0 24px 60px rgba(2,10,18,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.02);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+    }
+
+    .avatar-wrap{
+      position:absolute;
+      top:-36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:92px;
+      height:92px;
+      border-radius:50%;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 30%), rgba(255,255,255,0.02);
+      box-shadow:0 8px 26px rgba(6,20,30,0.6);
+      border:6px solid rgba(36,56,72,0.45);
+      overflow:hidden;
+      backdrop-filter: blur(4px);
+      left:50%;
+      transform:translateX(-50%);
+    }
+    .avatar{
+      width:100%;
+      height:100%;
+      display:block;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#002;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+      letter-spacing:0.6px;
+      color:white;
+    }
+
+    h1{
+      margin:12px 0 0;
+      font-size:36px;
+      font-weight:700;
+      text-align:center;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.6);
+    }
+
+    .meta-pills{
+      display:flex;
+      gap:10px;
+      margin-top:8px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .pill{
+      background:rgba(255,255,255,0.03);
+      padding:8px 14px;
+      border-radius:14px;
+      font-size:13px;
+      color:rgba(255,255,255,0.85);
+      box-shadow:inset 0 -2px 0 rgba(0,0,0,0.35);
+    }
+
+    .desc{
+      max-width:760px;
+      color:rgba(220,235,243,0.9);
+      text-align:center;
+      line-height:1.6;
+      margin-top:6px;
+      font-size:15px;
+    }
+
+    .cta-wrap{
+      margin-top:18px;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn-telegram{
+      width:min(520px,92%);
+      display:inline-block;
+      text-align:center;
+      padding:16px 22px;
+      border-radius:999px;
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#04212a;
+      font-weight:700;
+      font-size:17px;
+      text-decoration:none;
+      box-shadow:0 10px 30px rgba(80,160,255,0.12), inset 0 -4px 12px rgba(0,0,0,0.12);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-telegram:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 36px rgba(80,160,255,0.18), inset 0 -4px 12px rgba(0,0,0,0.12);
+    }
+
+    .footer{
+      margin-top:12px;
+      color:rgba(200,215,225,0.5);
+      font-size:13px;
+      text-align:center;
+      width:100%;
+    }
+
+    @media (max-width:520px){
+      h1{font-size:26px}
+      .avatar-wrap{width:78px;height:78px;top:-30px}
+      .card{padding:44px 18px 28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-label="Страница Telegram">
+    <div class="avatar-wrap" aria-hidden="true">
+      <div class="avatar">m</div>
+    </div>
+
+    <h1>mellstroygame</h1>
+
+    <div class="meta-pills" aria-hidden="true">
+      <div class="pill">Канал</div>
+      <div class="pill">Гайды</div>
+      <div class="pill">Ссылки</div>
+    </div>
+
+    <div class="desc">
+      Добро пожаловать! Это страница-вайзитка моего Telegram-канала. Нажмите кнопку ниже, чтобы перейти в Telegram и подписаться.
+    </div>
+
+    <div class="cta-wrap">
+      <a class="btn-telegram" href="https://t.me/mellstroygame8881" target="_blank" rel="noopener noreferrer">
+        Перейти в Telegram
+      </a>
+    </div>
+
+    <div class="footer">© 2026 • mellstroygame</div>
+  </div>
+</body>
+</html>
